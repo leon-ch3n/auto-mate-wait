@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
+                waitlistBtn.style.display = 'none';
                 waitlistForm.innerHTML = `
                   <div class="success-message">
                     ✅ Thanks for joining our waitlist! We'll be in touch soon.
