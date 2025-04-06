@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const waitlistForm = document.getElementById('waitlist-form');
 
     waitlistBtn.addEventListener('click', () => {
-        waitlistBtn.classList.add('hidden');
+        waitlistBtn.style.display = 'none';
         waitlistForm.classList.remove('hidden');
         document.getElementById('email').focus();
     });
