@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #F9F7FF; /* Light off-white with a subtle purple tint */
+    color: #111;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Floating Orbs */
+.orb-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4; /* Increased base opacity */
+    mix-blend-mode: multiply; /* This helps colors blend more vividly */
+}
+
+.orb-1 {
+    width: 45vw;
+    height: 45vw;
+    background-color: #FFCBF2; /* Pink */
+    top: 20%;
+    left: 15%;
+}
+
+.orb-2 {
+    width: 40vw;
+    height: 40vw;
+    background-color: #DEAAFF; /* Purple */
+    top: 60%;
+    left: 55%;
+}
+
+.orb-3 {
+    width: 50vw;
+    height: 50vw;
+    background-color: #C8E7FF; /* Light Blue */
+    top: 10%;
+    left: 70%;
+}
+
+.orb-4 {
+    width: 35vw;
+    height: 35vw;
+    background-color: #D8BBFF; /* Using D8BBFF from palette */
+    top: 75%;
+    left: 10%;
+}
+
+.orb-5 {
+    width: 45vw;
+    height: 45vw;
+    background-color: #D0D1FF; /* Light Purple-Blue */
+    top: 40%;
+    left: 35%;
+}
+
+/* Additional orbs to ensure all colors from the palette are used */
+.orb-6 {
+    width: 55vw;
+    height: 55vw;
+    background-color: #E2AFFF; /* From palette */
+    top: 30%;
+    left: 60%;
+    opacity: 0.35;
+}
+
+.orb-7 {
+    width: 40vw;
+    height: 40vw;
+    background-color: #C0FDFF; /* From palette - Light teal */
+    top: 15%;
+    left: 25%;
+    opacity: 0.35;
+}
+
+.orb-8 {
+    width: 50vw;
+    height: 50vw;
+    background-color: #ECBCFD; /* Close to E5B3FE from palette */
+    top: 65%;
+    left: 25%;
+    opacity: 0.35;
+}
+
+.orb-9 {
+    width: 60vw;
+    height: 60vw;
+    background-color: #E2AFFF; /* From palette */
+    top: 45%;
+    left: 5%;
+    opacity: 0.3;
+}
+
+.orb-10 {
+    width: 45vw;
+    height: 45vw;
+    background-color: #F3C4FB; /* Close to F3C4FB from palette */
+    top: 5%;
+    left: 40%;
+    opacity: 0.35;
+}
+
+/* Header & Footer */
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.location, .copyright {
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.nav-links a, .footer-links a {
+    color: #222;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover, .footer-links a:hover {
+    opacity: 1;
+    color: #DEAAFF;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+    position: relative;
+}
+
+.logo-container {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 5rem;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111;
+    position: relative;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Waitlist Section */
+.waitlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.waitlist-button, .submit-button {
+    background-color: #DEAAFF;
+    border: none;
+    color: #111;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(222, 170, 255, 0.5);
+}
+
+.waitlist-button:hover, .submit-button:hover {
+    background-color: #D0D1FF;
+    box-shadow: 0 6px 25px rgba(208, 209, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.form-container {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(222, 170, 255, 0.3);
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(222, 170, 255, 0.5);
+    border-radius: 8px;
+    color: #111;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #DEAAFF;
+    box-shadow: 0 0 10px rgba(222, 170, 255, 0.6);
+}
+
+input::placeholder {
+    color: #888;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #DEAAFF;
+}
+
+/* Success Message */
+.success-message {
+    padding: 1.5rem;
+    background-color: rgba(200, 231, 255, 0.4);
+    border-radius: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    header, footer {
+        padding: 1.5rem;
+    }
+
+    .orb {
+        filter: blur(60px);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    header, footer {
+        padding: 1rem;
+    }
+
+    .orb {
+        filter: blur(50px);
+    }
+}
