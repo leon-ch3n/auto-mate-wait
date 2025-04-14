@@ -372,7 +372,7 @@ input::placeholder {
 
     .video-container p {
         font-family: 'Montserrat', sans-serif;
-        color: rgba(255, 255, 255, 0.8);
+        color: #000000 !important; /* Force black text on all devices */
         margin-bottom: 20px;
     }
 
