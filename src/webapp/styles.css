@@ -367,7 +367,7 @@ input::placeholder {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         margin-bottom: 10px;
-        color: #ffffff;
+        color: #000000 !important; /* Force black text on all devices */
     }
 
     .video-container p {
