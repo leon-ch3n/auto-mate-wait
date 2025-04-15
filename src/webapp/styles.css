@@ -402,18 +402,5 @@ input::placeholder {
         }
 
     }
-    .video-container {
-        margin: 120px auto 40px; /* Increased from 60px to 120px for top margin */
-        max-width: 720px;
-        text-align: center;
-        padding: 0 20px;
-    }
-
-    /* Update the media query for smaller screens */
-    @media (max-width: 768px) {
-        .video-container {
-            margin: 80px auto 30px; /* Increased from 40px to 80px for top margin */
-        }
-    }
 
 }
